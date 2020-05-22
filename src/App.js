@@ -4,7 +4,7 @@ import Form from './Components/Form/Form.js';
 import Weather from './Components/Weather/Weather.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const API_KEY = 'aeb2821bab516286dae6e9ca19488651';
+const API_KEY = "YOUR_API_KEY";
 
 class App extends Component {
 	constructor() {
