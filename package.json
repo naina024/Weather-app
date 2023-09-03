@@ -1,5 +1,6 @@
 {
   "name": "weatherapp",
+  "homepage": "https://naina024.github.io/Weather-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,16 +8,21 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
+    "gh-pages": "^6.0.0",
+    "nvm": "^0.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "tachyons": "^4.12.0"
+    "tachyons": "^4.12.0",
+    "webpack": "4.42.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
