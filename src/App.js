@@ -4,7 +4,7 @@ import Form from './Components/Form/Form.js';
 import Weather from './Components/Weather/Weather.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = "899aeb0dc4f20b38a84654fa034c42cd";
 
 class App extends Component {
 	constructor() {
@@ -33,8 +33,9 @@ class App extends Component {
 		const city = e.target.elements.city.value;
 
 		try {
+			// https://api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={API key}
 			const api_call = await fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`
+				`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
 			);
 
 			const response = await api_call.json();
